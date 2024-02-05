@@ -631,7 +631,7 @@ body {
   }
 
   .face .coder .description {
-    z-index: 10000;
+    z-index: 100;
     right: 0;
   }
 
@@ -645,7 +645,7 @@ body {
   }
 
   .face .designer .description {
-    z-index: 10000;
+    z-index: 100;
     margin-left: -70px;
     left: 0px;
   }
