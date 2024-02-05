@@ -1,0 +1,793 @@
+html {
+  background: #ffffff;
+  font-size: 62.5%;
+  -webkit-overflow-scrolling: touch;
+  -webkit-text-size-adjust: 100%;
+  -ms-text-size-adjust: 100%;
+  overflow-x: hidden;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  padding-top: 50px;
+  width: 100%;
+  font-family: "proxima nova light", "Helvetica Neue", Helvetica, Arial,
+    Sans-serif;
+  background-color: transparent;
+  color: #333333;
+  overflow-x: hidden;
+  text-rendering: optimizeLegibility;
+}
+
+.menu {
+  z-index: 1000;
+  position: fixed;
+  top: -1px;
+  left: 5px;
+  width: 200px;
+  height: 200px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.menu li {
+  position: absolute;
+  list-style: none;
+  left: -10;
+  transform-origin: 100px;
+  transition: calc(0.1s * var(--i));
+  transform: rotate(0deg) translateX(80px);
+}
+
+.menu.active li {
+  transform: rotate(calc(360deg / 7 * var(--i)));
+}
+
+.menu li a {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 60px;
+  height: 60px;
+  font-size: 45;
+  background: #fff;
+  color: #000000;
+  border-radius: 50%;
+  transform: rotate(calc(360deg / -7 * var(--i)));
+  /* box-shadow: 0 3px 4px rgba(0, 0, 0, 0.15); */
+  transition: 0.5s;
+}
+
+.menu li a:hover {
+  color: red;
+}
+
+.toggle {
+  position: absolute;
+  width: 60px;
+  height: 60px;
+  background: #ffffff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+  border-radius: 50%;
+  cursor: pointer;
+  font-size: 50;
+  transition: transform 1.2s;
+}
+
+.menu.active .toggle {
+  transform: rotate(360deg);
+}
+
+.clearfix {
+  width: 100%;
+  margin-left: 3%;
+  padding-bottom: 5px;
+}
+
+#section div {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Homepage Half Face */
+.face {
+  width: 100%;
+  position: relative;
+  margin-left: -30%;
+}
+
+.face .face-img {
+  display: block;
+  margin: 0px;
+}
+
+.face a {
+  color: #757575;
+  text-decoration: none;
+}
+
+.face .coder,
+.face .designer {
+  position: absolute;
+  width: 40%;
+  display: block;
+  /* z-index: 10; */
+  height: 20%;
+  /* vertical centering */
+  margin: auto;
+  top: 0;
+  bottom: 0;
+}
+
+.face .coder h1,
+.face .designer h1 {
+  display: none;
+}
+
+.face .designer {
+  left: 0;
+}
+
+.face .coder {
+  right: 0;
+  text-align: right;
+}
+
+.face .designer-img,
+.face .coder-img,
+.face .designer-bg,
+.face .coder-bg,
+.face .coder p,
+.face .designer p {
+  display: none;
+}
+
+.intro {
+  border-bottom: 5px solid black;
+}
+
+.container {
+  overflow: hidden;
+}
+
+
+.salute {
+  display: flex;
+  align-items: center;
+  overflow: hidden;
+}
+
+.saluteImgContainer {
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+
+.name {
+  font-size: 8vw;
+  color: #d1d1d1;
+  cursor: default;
+  text-align: center;
+}
+
+.jobTitleContainer {
+  height: 40vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.dark {
+  background: url("../images/bg1.png");
+}
+
+.purple {
+  background: rebeccapurple url("../images/bg2.png");
+}
+
+.jobTitle {
+  font-size: 8vw;
+  color: #333;
+  line-height: 40vh;
+  cursor: default;
+}
+
+.githubContainer {
+  height: 80vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+  background-color: rgb(240, 235, 230);
+}
+
+.box {
+  width: 15px;
+  height: 15px;
+  background-color: #cac6c6;
+  border-radius: 2px;
+  cursor: pointer;
+  transition: 3s all ease;
+}
+
+.active:nth-child(4n) {
+  background-color: #00a42f;
+}
+
+.githubChart:hover .active:nth-child(2n + 1) {
+  background-color: #00a42f;
+}
+
+.githubChart:hover .active:nth-child(2n) {
+  background-color: #00a42f;
+}
+
+.githubSm {
+  display: none;
+}
+
+.githubChart {
+  width: 820px;
+}
+
+.dates {
+  padding: 10px;
+  color: #555;
+  font-size: 12px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.boxContainer {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 5px;
+}
+
+@media only screen and (min-width: 320px) {
+
+  .menu {
+    width: 100px;
+    height: 100px;
+  }
+
+  .toggle {
+    height: 30px;
+    width: 30px;
+  }
+
+  .menu li {
+    left: 0;
+    transform-origin: 50px;
+    transform: rotate(0deg) translateX(40px);
+  }
+
+  .menu li a {
+    height: 20px;
+    width: 20px;
+  }
+
+  .face-img {
+    width: 90%;
+  }
+
+  .face .coder h1,
+  .face .designer h1 {
+    display: block;
+    font-size: 15px;
+  }
+
+  .designer .description {
+    margin-left: 65px;
+  }
+
+  .coder .description {
+    margin-left: -25px;
+  }
+
+
+  .saluteImg {
+    width: 30%;
+    margin-left: 70%;
+
+  }
+
+  .nameContainer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    margin-top: -30px;
+    height: 50vh;
+    background-color: rebeccapurple;
+  }
+
+  .githubTitle {
+    margin-top: -100px;
+    font-size: 18px;
+    color: #333;
+  }
+
+  .githubTitle h1 {
+    padding: 0;
+    margin: 0;
+  }
+
+  .githubChart {
+    margin-top: -200px;
+    transform: scale(0.4);
+  }
+
+
+}
+
+@media only screen and (min-width: 414px) {
+
+  .face .coder h1,
+  .face .designer h1 {
+    font-size: 20px;
+  }
+
+  .designer .description {
+    margin-left: 65px;
+  }
+
+  .coder .description {
+    margin-left: -30px;
+  }
+
+  .githubTitle {
+    font-size: 22px;
+  }
+
+  .githubChart {
+    transform: scale(0.5);
+  }
+}
+
+@media only screen and (min-width: 550px) {
+  .menu {
+    width: 150px;
+    height: 150px;
+  }
+
+  .toggle {
+    height: 40px;
+    width: 40px;
+    left: 45;
+  }
+
+  .menu li {
+    left: 0;
+    transform-origin: 60px;
+    transform: rotate(0deg) translateX(50px);
+  }
+
+  .menu li a {
+    height: 25px;
+    width: 25px;
+  }
+
+  .clearfix {
+    margin-left: 1%;
+  }
+
+  .face .coder h1,
+  .face .designer h1 {
+    font-size: 24px;
+  }
+
+  .designer .description {
+    margin-left: 70px;
+  }
+
+  .coder .description {
+    margin-left: -20px;
+  }
+
+  .saluteImg {
+    width: 35%;
+    margin-top: 7%;
+    margin-left: 62%;
+  }
+
+  .githubTitle {
+    font-size: 28px;
+  }
+
+  .githubChart {
+    transform: scale(0.6);
+  }
+}
+
+@media only screen and (min-width: 768px) {
+
+  .menu {
+    width: 200px;
+    height: 200px;
+  }
+
+  .toggle {
+    height: 50px;
+    width: 50px;
+    left: 60;
+  }
+
+  .menu li {
+    left: 0;
+    transform-origin: 80px;
+    transform: rotate(0deg) translateX(65px);
+  }
+
+  .menu li a {
+    height: 30px;
+    width: 30px;
+  }
+
+  .face .coder,
+  .face .designer {
+    width: 30%;
+    height: 44%;
+  }
+
+  .description {
+    display: flex;
+    max-width: 200px;
+    max-height: 100px;
+    flex-direction: column;
+  }
+
+  .designer {
+    padding-left: 70px;
+  }
+
+  .coder .description {
+    margin-top: -30px;
+    margin-left: -50%;
+    text-align: left;
+  }
+
+  .saluteImg {
+    width: 50%;
+    margin-left: 45%;
+  }
+
+  .face .coder h1,
+  .face .designer h1 {
+    font-size: 20px;
+  }
+
+  .face .coder p,
+  .face .designer p {
+    display: block;
+    font-size: 15px;
+  }
+
+  .githubTitle {
+    margin-top: -50px;
+    font-size: 34px;
+  }
+
+  .githubChart {
+    margin-top: -100px;
+    transform: scale(0.8);
+  }
+}
+
+@media only screen and (min-width: 900px) {
+
+  .description {
+    display: flex;
+    max-width: 200px;
+    max-height: 200px;
+    flex-direction: column;
+  }
+
+  .designer {
+    padding-left: 90px;
+  }
+
+  .saluteImg {
+    width: 55%;
+    margin-left: 45%;
+  }
+
+  .face .coder h1,
+  .face .designer h1 {
+    font-size: 35px;
+  }
+
+  .githubTitle {
+    margin-top: -1px;
+    font-size: 34px;
+  }
+
+
+  .githubChart {
+    margin-top: -1px;
+    transform: scale(1);
+  }
+}
+
+@media only screen and (min-width: 1024px) {
+
+  .description {
+    display: flex;
+    max-width: 200px;
+    max-height: 200px;
+    flex-direction: column;
+    margin-top: -80px;
+  }
+
+  .designer {
+    padding-left: 90px;
+  }
+
+  .coder .description {
+    margin-top: -110px;
+    margin-left: -50%;
+  }
+
+  .saluteImg {
+    width: 60%;
+    margin-left: 35%;
+  }
+
+  .face .coder h1,
+  .face .designer h1 {
+    font-size: 45px;
+    text-align: center;
+  }
+
+  .face .coder p,
+  .face .designer p {
+    margin-top: -30px;
+    font-size: 22px;
+  }
+
+  .githubTitle {
+    margin-top: -1px;
+    font-size: 48px;
+  }
+
+
+  .githubChart {
+    margin-top: -1px;
+    transform: scale(1.2);
+  }
+}
+
+@media only screen and (min-width: 1140px) {
+
+  .menu {
+    width: 200px;
+    height: 200px;
+  }
+
+  .toggle {
+    height: 60px;
+    width: 60px;
+    left: 70;
+  }
+
+  .menu li {
+    left: 0;
+    transform-origin: 100px;
+    transform: rotate(0deg) translateX(80px);
+  }
+
+  .menu li a {
+    height: 40px;
+    width: 40px;
+  }
+
+  .face {
+    width: 1040px;
+    height: 600px;
+    position: relative;
+    margin-left: -20%;
+  }
+
+  .face .coder,
+  .face .designer {
+    width: 520px;
+    height: 600px;
+    top: 0px;
+    position: absolute;
+  }
+
+  .face .coder h1,
+  .face .designer h1 {
+    font-size: 56px;
+  }
+
+  .face .coder .description,
+  .face .designer .description {
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    width: 600px;
+  }
+
+
+  .face .coder .arrow,
+  .face .designer .arrow {
+    width: 85px;
+    height: 140px;
+    display: block;
+    position: absolute;
+    top: 20px;
+  }
+
+  .face .coder {
+    text-align: left;
+    right: 0px;
+  }
+
+  .face .coder .description {
+    z-index: 10000;
+    right: 0;
+  }
+
+  .face .coder .arrow {
+    right: 0px;
+    background-position: 0px -751px;
+  }
+
+  .face .designer {
+    left: 0px;
+  }
+
+  .face .designer .description {
+    z-index: 10000;
+    margin-left: -70px;
+    left: 0px;
+  }
+
+  .face .designer .arrow {
+    left: 0px;
+    background-position: 0px -892px;
+  }
+
+  .face .designer-img,
+  .face .coder-img {
+    width: 420px;
+    height: 600px;
+    position: absolute;
+    top: 0;
+    background: url(../images/flip_face.png) 0 0 no-repeat;
+    display: block;
+    z-index: 1;
+  }
+
+  .face .designer-img {
+    background-position: -20px -625px;
+    left: 100px;
+  }
+
+  .face .coder-img {
+    background-position: calc(100% + 20px) 0px;
+    right: 100px;
+  }
+
+  .face .designer-bg,
+  .face .coder-bg {
+    width: 420px;
+    height: 200px;
+    position: absolute;
+    bottom: 0px;
+    background: url(../images/flip_face.png) 0 -1300px no-repeat;
+    display: block;
+  }
+
+  .face .designer-bg {
+    left: 100px;
+  }
+
+  .face .coder-bg {
+    right: 100px;
+    background-position: 100% -1300px;
+  }
+
+  .face .face-img {
+    display: none;
+  }
+
+  .saluteImg {
+    width: 72%;
+  }
+
+  .githubTitle{
+    display: flex;
+    flex-direction: row;
+  }
+
+  .githubChart {
+    transform: scale(1.5);
+  }
+}
+
+@media only screen and (min-width: 1700px) {
+
+  .menu {
+    width: 200px;
+    height: 200px;
+  }
+
+  .toggle {
+    height: 60px;
+    width: 60px;
+    left: 70;
+  }
+
+  .menu li {
+    left: 0;
+    transform-origin: 100px;
+    transform: rotate(0deg) translateX(80px);
+  }
+
+  .menu li a {
+    height: 40px;
+    width: 40px;
+  }
+
+  .face {
+    width: 1040px;
+    height: 600px;
+    position: relative;
+  }
+
+  .face .coder,
+  .face .designer {
+    width: 520px;
+    height: 600px;
+    top: 0px;
+    position: absolute;
+  }
+
+  .face .coder h1,
+  .face .designer h1 {
+    font-size: 82px;
+    font-size: 8.2rem;
+  }
+
+  .face .coder .description,
+  .face .designer .description {
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    width: 300px;
+  }
+
+  .face .coder .description {
+    margin-right: -100px;
+  }
+
+  .face .designer .description {
+    margin-left: -100px;
+  }
+
+  .face .coder .arrow,
+  .face .designer .arrow {
+    width: 85px;
+    height: 140px;
+    display: block;
+    position: absolute;
+    top: 20px;
+  }
+
+  .face .coder {
+    text-align: left;
+    right: 0px;
+  }
+
+  .face .coder .description {
+    right: 0px;
+  }
+}
