@@ -27,8 +27,8 @@ body {
 
   /* NAVBAR */
   .menu {
-    width: 100px;
-    height: 100px;
+    width: 120px;
+    height: 120px;
     z-index: 1000;
     position: fixed;
     top: -1px;
@@ -39,12 +39,22 @@ body {
   }
 
   .toggle {
-    height: 30px;
-    width: 30px;
+    position: absolute;
+    width: 50px;
+    height: 50px;
+    background: #ffffff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+    border-radius: 50%;
+    cursor: pointer;
+    font-size: 50;
+    transition: transform 1.2s;
   }
 
   .menu li {
-    transform-origin: 50px;
+    transform-origin: 60px;
     transform: rotate(0deg) translateX(40px);
     position: absolute;
     list-style: none;
@@ -53,8 +63,8 @@ body {
   }
 
   .menu li a {
-    height: 20px;
-    width: 20px;
+    height: 30px;
+    width: 30px;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -73,21 +83,6 @@ body {
 
   .menu li a:hover {
     color: red;
-  }
-
-  .toggle {
-    position: absolute;
-    width: 30px;
-    height: 30px;
-    background: #ffffff;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    z-index: 1000;
-    border-radius: 50%;
-    cursor: pointer;
-    font-size: 50;
-    transition: transform 1.2s;
   }
 
   .menu.active .toggle {
@@ -122,8 +117,8 @@ body {
 
   .face {
     width: 100%;
+    margin-top: 10%;
     position: relative;
-    background-color: red;
   }
 
   .face .face-img {
@@ -160,11 +155,6 @@ body {
     margin-left: 25px;
   }
 
-  .designer .description h1,
-  .coder .description h1 {
-    font-size: 12px;
-  }
-
   .face .designer {
     left: 0;
   }
@@ -185,6 +175,7 @@ body {
 
   .saluteImg {
     width: 100%;
+    margin-left: 20px;
   }
 
   /* FACE CODE END */
