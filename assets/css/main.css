@@ -124,7 +124,7 @@ body {
   .face .face-img {
     display: block;
     margin: 0px;
-    width: 100%;
+    width: 130%;
   }
 
   .face a {
@@ -148,11 +148,16 @@ body {
   .face .coder h1,
   .face .designer h1 {
     display: block;
-    font-size: 15px;
+    font-size: 5vw;
   }
 
   .coder .description {
-    margin-left: 25px;
+    margin-left: 30px;
+  }
+
+  
+  .designer .description {
+    margin-right: 15px;
   }
 
   .face .designer {
@@ -175,7 +180,6 @@ body {
 
   .saluteImg {
     width: 100%;
-    margin-left: 20px;
   }
 
   /* FACE CODE END */
