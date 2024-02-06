@@ -5,7 +5,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
     <link rel="stylesheet" href="./assets/css/main.css" />
-    <base href="https://samyakjain1997.github.io/Samyak_Web_Portfolio/" />
     <link
       href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;500;600;700;800&display=swap"
       rel="stylesheet"
@@ -15,16 +14,16 @@
     <div class="menu">
       <div class="toggle"><ion-icon name="menu-outline"></ion-icon></div>
       <li style="--i: 0">
-        <a href="/Samyak_Web_Portfolio/index.html"><ion-icon name="home-outline"></ion-icon></a>
+        <a href="/index.html"><ion-icon name="home-outline"></ion-icon></a>
       </li>
       <li style="--i: 1">
-        <a href="/Samyak_Web_Portfolio/aboutme.html"><ion-icon name="person-outline"></ion-icon></a>
+        <a href="/aboutme.html"><ion-icon name="person-outline"></ion-icon></a>
       </li>
       <li style="--i: 2">
-        <a href="/Samyak_Web_Portfolio/project.html"><ion-icon name="laptop-outline"></ion-icon></a>
+        <a href="/project.html"><ion-icon name="laptop-outline"></ion-icon></a>
       </li>
       <li style="--i: 3">
-        <a href="/Samyak_Web_Portfolio/contactme.html"><ion-icon name="call-outline"></ion-icon></a>
+        <a href="/contactme.html"><ion-icon name="call-outline"></ion-icon></a>
       </li>
       <li style="--i: 4">
         <a href="#"><ion-icon name="logo-github"></ion-icon></a>
@@ -36,76 +35,74 @@
         <a href="#"><ion-icon name="save-outline"></ion-icon></a>
       </li>
     </div>
-    <div class="clearfix">
-      <div id="content">
-        <section id="section">
-          <div>
-            <div id="face" class="face">
-              <a href="/Samyak_Web_Portfolio/aboutme.html">
-                <div id="designer" class="designer">
-                  <div id="designer-desc" class="description">
-                    <h1>About Me</h1>
-                    <br />
-                    <p>
-                      UI/UX Designer with a passion for designing beautiful and
-                      functional user experiences.
-                    </p>
-                  </div>
-                </div>
-              </a>
-              <a href="/Samyak_Web_Portfolio/project.html">
-                <div id="coder" class="coder">
-                  <div id="coder-desc" class="description">
-                    <h1>My Projects</h1>
-                    <br />
-                    <p>
-                      Front end developer who writes clean, elegant and
-                      efficient code.
-                    </p>
-                  </div>
-                </div>
-              </a>
-              <img
-                id="face-img"
-                class="face-img"
-                src="./assets/images/face_short.png"
-              />
-              <div id="designer-img" class="designer-img"></div>
-              <div id="coder-img" class="coder-img"></div>
-              <div id="designer-bg" class="designer-bg"></div>
-              <div id="coder-bg" class="coder-bg"></div>
-            </div>
-          </div>
-        </section>
-      </div>
-      <script
-        type="text/javascript"
-        src="https://ajax.googleapis.com/ajax/libs/jquery/1.6/jquery.min.js?ver=6.4.2"
-        id="jquery-js"
-      ></script>
-      <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
-      <script src="./assets/js/face.js"></script>
-      <script type="text/javascript">
-        $(document).ready(function () {
-          $("body").jpreLoader(
-            {
-              showSplash: true,
-            },
-            function () {
-              $("#face").animateHome();
-              $("#face").resizeFace();
-            }
-          );
-        });
-      </script>
-    </div>
+
     <div class="container">
       <!-- INTRODUCTION -->
       <div class="intro">
         <div class="salute">
-          <div class="saluteTextContainer"></div>
+          <div class="saluteTextContainer">
+            <div id="content">
+              <section id="section">
+                  <div id="face" class="face">
+                    <a href="/aboutme.html">
+                      <div id="designer" class="designer">
+                        <div id="designer-desc" class="description">
+                          <h1>About Me</h1>
+                          <br />
+                          <p>
+                            UI/UX Designer with a passion for designing
+                            beautiful and functional user experiences.
+                          </p>
+                        </div>
+                      </div>
+                    </a>
+                    <a href="/project.html">
+                      <div id="coder" class="coder">
+                        <div id="coder-desc" class="description">
+                          <h1>My Projects</h1>
+                          <br />
+                          <p>
+                            Front end developer who writes clean, elegant and
+                            efficient code.
+                          </p>
+                        </div>
+                      </div>
+                    </a>
+                    <img
+                      id="face-img"
+                      class="face-img"
+                      src="./assets/images/face_short.png"
+                    />
+                    <div id="designer-img" class="designer-img"></div>
+                    <div id="coder-img" class="coder-img"></div>
+                    <div id="designer-bg" class="designer-bg"></div>
+                    <div id="coder-bg" class="coder-bg"></div>
+                  </div>
+              </section>
+            </div>
+            <script
+              type="text/javascript"
+              src="https://ajax.googleapis.com/ajax/libs/jquery/1.6/jquery.min.js?ver=6.4.2"
+              id="jquery-js"
+            ></script>
+            <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
+            <script src="./assets/js/face.js"></script>
+            <script type="text/javascript">
+              $(document).ready(function () {
+                $("body").jpreLoader(
+                  {
+                    showSplash: true,
+                  },
+                  function () {
+                    $("#face").animateHome();
+                    $("#face").resizeFace();
+                  }
+                );
+              });
+            </script>
+          </div>
           <div class="saluteImgContainer">
-            <img src="./assets/images/person.png" alt="" class="saluteImg" />
+            <img src="./assets/images/person.png" alt="" class="saluteImg"/>
           </div>
         </div>
         <div class="nameContainer">
