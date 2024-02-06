@@ -20,6 +20,13 @@ body {
 }
 
 
+.intro {
+  border-bottom: 5px solid black;
+}
+
+.container {
+  overflow: hidden;
+}
 
 @media only screen and (min-width: 120px) {
 
@@ -155,7 +162,7 @@ body {
     margin-left: 30px;
   }
 
-  
+
   .designer .description {
     margin-right: 15px;
   }
@@ -185,15 +192,15 @@ body {
   /* FACE CODE END */
   /* FIRST PART END */
 
-  .intro {
-    border-bottom: 5px solid black;
+  /* LEFT RIGHT FLOW */
+  .nameContainer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    height: 50vh;
+    background-color: rebeccapurple;
   }
-
-  .container {
-    overflow: hidden;
-  }
-
-
 
   .name {
     font-size: 8vw;
@@ -224,12 +231,16 @@ body {
     cursor: default;
   }
 
+  /* LEFT RIGHT FLOW END*/
+
+  /* GITHUB */
+
   .githubContainer {
-    height: 80vh;
+    padding-top: 20%;
+    height: 50vh;
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: space-around;
     background-color: rgb(240, 235, 230);
   }
 
@@ -240,6 +251,7 @@ body {
     border-radius: 2px;
     cursor: pointer;
     transition: 3s all ease;
+
   }
 
   .active:nth-child(4n) {
@@ -254,12 +266,9 @@ body {
     background-color: #00a42f;
   }
 
-  .githubSm {
-    display: none;
-  }
-
   .githubChart {
     width: 820px;
+    transform: scale(0.4);
   }
 
   .dates {
@@ -276,24 +285,7 @@ body {
     gap: 5px;
   }
 
-  .salute {
-    max-width: 100%;
-  }
-
-
-
-
-  .nameContainer {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-    height: 50vh;
-    background-color: rebeccapurple;
-  }
-
   .githubTitle {
-    margin-top: -100px;
     font-size: 18px;
     color: #333;
   }
@@ -303,10 +295,162 @@ body {
     margin: 0;
   }
 
+  /* GITHUB END*/
+
+
+}
+
+
+@media only screen and (min-width: 414px) {
+
+  .githubTitle {
+    font-size: 24px;
+  }
+
   .githubChart {
-    margin-top: -200px;
-    transform: scale(0.4);
+    transform: scale(0.6);
+  }
+}
+
+@media only screen and (min-width: 550px) {
+  .menu {
+    width: 150px;
+    height: 150px;
+  }
+
+  .toggle {
+    height: 40px;
+    width: 40px;
+    left: 45;
+  }
+
+  .menu li {
+    left: 0;
+    transform-origin: 60px;
+    transform: rotate(0deg) translateX(50px);
+  }
+
+  .menu li a {
+    height: 30px;
+    width: 30px;
+  }
+
+  .face .coder h1,
+  .face .designer h1 {
+    font-size: 24px;
+  }
+
+  .coder .description {
+    margin-left: 50px;
+  }
+
+  .githubTitle {
+    font-size: 28px;
+  }
+
+  .githubChart {
+    transform: scale(0.65);
+  }
+}
+
+@media only screen and (min-width: 768px) {
+
+  .menu {
+    width: 200px;
+    height: 200px;
+  }
+
+  .toggle {
+    height: 50px;
+    width: 50px;
+    left: 60;
+  }
+
+  .menu li {
+    left: 0;
+    transform-origin: 80px;
+    transform: rotate(0deg) translateX(65px);
+  }
+
+  .menu li a {
+    height: 30px;
+    width: 30px;
+  }
+
+  .face .coder,
+  .face .designer {
+    width: 30%;
+    height: 44%;
+  }
+
+  .description {
+    display: flex;
+    max-width: 200px;
+    max-height: 100px;
+    flex-direction: column;
+  }
+
+  .designer {
+    padding-left: 70px;
+  }
+
+  .coder .description {
+    margin-top: -30px;
+    margin-left: -1%;
+    text-align: left;
+  }
+
+  .designer .description {
+    margin-left: -30%;
+
+  }
+
+  .face .designer h1 {
+    margin-left: -10%;
+  }
+
+  .face .coder h1,
+  .face .designer h1 {
+    font-size: 20px;
+  }
+
+  .face .coder p,
+  .face .designer p {
+    display: block;
+    font-size: 15px;
+  }
+
+  .githubTitle {
+    font-size: 34px;
+  }
+
+  .githubChart {
+    transform: scale(0.85);
+  }
+}
+
+@media only screen and (min-width: 900px) {
+
+
+  .designer {
+    padding-left: 70px;
   }
 
 
+  .face .coder h1,
+  .face .designer h1 {
+    font-size: 35px;
+  }
+
+  .githubTitle {
+    margin-top: -100px;
+    font-size: 34px;
+    padding-bottom: 30px;
+  }
+
+
+  .githubChart {
+    margin-top: 30px;
+    transform: scale(1);
+  }
 }
