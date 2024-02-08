@@ -443,6 +443,7 @@ body {
   }
 
   .githubTitle {
+    margin-top: -100px;
     font-size: 34px;
     padding-bottom: 30px;
   }
@@ -453,3 +454,283 @@ body {
     transform: scale(1);
   }
 }
+
+@media only screen and (min-width: 1024px) {
+
+  .designer {
+    padding-left: 70px;
+  }
+
+
+  .face .coder h1,
+  .face .designer h1 {
+    font-size: 42px;
+  }
+
+  .face .coder p,
+  .face .designer p {
+    font-size: 20px;
+    margin-top: -10px;
+  }
+
+  .githubTitle {
+    margin-top: -100px;
+    font-size: 34px;
+    padding-bottom: 30px;
+  }
+
+
+  .githubChart {
+    margin-top: 30px;
+    transform: scale(1.1);
+  }
+}
+
+
+@media only screen and (min-width: 1140px) {
+
+  .menu {
+    width: 200px;
+    height: 200px;
+  }
+
+  .toggle {
+    height: 60px;
+    width: 60px;
+    left: 70;
+  }
+
+  .menu li {
+    left: 0;
+    transform-origin: 100px;
+    transform: rotate(0deg) translateX(80px);
+  }
+
+  .menu li a {
+    height: 40px;
+    width: 40px;
+  }
+
+  .salute {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .saluteTextContainer {
+    width: 100%;
+  }
+
+  .face {
+    width: 1040px;
+    height: 600px;
+    position: relative;
+  }
+
+  .face .coder,
+  .face .designer {
+    width: 520px;
+    height: 600px;
+    top: 0px;
+    position: absolute;
+  }
+
+  .face .coder h1,
+  .face .designer h1 {
+    font-size: 50px;
+    text-align: center;
+  }
+
+  .face .designer h1 {
+    padding-left: 30px;
+  }
+
+  .face .coder p,
+  .face .designer p {
+    font-size: 22px;
+    margin-top: -10px;
+  }
+
+  .description {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .face .coder .description,
+  .face .designer .description {
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    width: 600px;
+  }
+
+  .face .coder {
+    right: 0px;
+  }
+
+  .face .coder .description {
+    right: -200px;
+  }
+
+  .face .designer {
+    text-align: left;
+    left: 50px;
+  }
+
+  .face .designer .description {
+    left: 0px;
+  }
+
+  .face .designer-img,
+  .face .coder-img {
+    width: 420px;
+    height: 600px;
+    position: absolute;
+    top: 0;
+    background: url(../images/flip_face.png) 0 0 no-repeat;
+    display: block;
+    z-index: 1;
+  }
+
+  .face .designer-img {
+    background-position: -20px -625px;
+    left: 100px;
+  }
+
+  .face .coder-img {
+    background-position: calc(100% + 20px) 0px;
+    right: 100px;
+  }
+
+  .face .designer-bg,
+  .face .coder-bg {
+    width: 420px;
+    height: 200px;
+    position: absolute;
+    bottom: 0px;
+    background: url(../images/flip_face.png) 0 -1300px no-repeat;
+    display: block;
+  }
+
+  .face .designer-bg {
+    left: 100px;
+  }
+
+  .face .coder-bg {
+    right: 100px;
+    background-position: 100% -1300px;
+  }
+
+  .face .face-img {
+    display: none;
+  }
+
+  .githubTitle {
+    margin-top: -200px;
+    font-size: 48px;
+    display: flex;
+    padding-bottom: 60px;
+  }
+
+
+  .githubChart {
+    margin-top: 60px;
+    transform: scale(1.5);
+  }
+}
+
+
+
+
+
+
+
+
+
+/* 
+
+@media only screen and (min-width: 1700px) {
+
+  .menu {
+    width: 200px;
+    height: 200px;
+  }
+
+  .toggle {
+    height: 60px;
+    width: 60px;
+    left: 70;
+  }
+
+  .menu li {
+    left: 0;
+    transform-origin: 100px;
+    transform: rotate(0deg) translateX(80px);
+  }
+
+  .menu li a {
+    height: 40px;
+    width: 40px;
+  }
+
+  .saluteTextContainer {
+    background-color: #00a42f;
+    margin-left: 15%;
+  }
+
+  .face {
+    width: 1040px;
+    height: 600px;
+    position: relative;
+  }
+
+  .face .coder,
+  .face .designer {
+    width: 520px;
+    height: 600px;
+    top: 0px;
+    position: absolute;
+  }
+
+  .face .coder h1,
+  .face .designer h1 {
+    font-size: 82px;
+    font-size: 8.2rem;
+  }
+
+  .face .coder .description,
+  .face .designer .description {
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    width: 300px;
+  }
+
+  .face .coder .description {
+    margin-right: -100px;
+  }
+
+  .face .designer .description {
+    margin-left: -100px;
+  }
+
+  .face .coder .arrow,
+  .face .designer .arrow {
+    width: 85px;
+    height: 140px;
+    display: block;
+    position: absolute;
+    top: 20px;
+  }
+
+  .face .coder {
+    text-align: left;
+    right: 0px;
+  }
+
+  .face .coder .description {
+    right: 0px;
+  }
+}    */
